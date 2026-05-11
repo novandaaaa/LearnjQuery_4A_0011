@@ -45,16 +45,7 @@ btnTambah.addEventListener("click", function(){
         }
     });
 
-    
-
-    daftarTugas.appendChild(listBaru);
-    warnabaru.forEach((item, index) => {
-        if(index & 2 === 0){
-            item.style.color = "red";
-        } else{
-            item.style.color = "green";
-        }
-    })
-
-    inputTugas.value = "";
+    let btnStatus = document.createElement("button");
+    btnStatus.innerHTML = "Done";
+    btnStatus.classList.add("status");
 });
