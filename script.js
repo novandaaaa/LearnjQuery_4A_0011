@@ -79,4 +79,8 @@ btnTambah.addEventListener("click", function(){
     let btnHapus = document.createElement("button");
     btnHapus.innerHTML = "Hapus";
     btnHapus.classList.add("hapus");
+
+    btnHapus.addEventListener("click", function () {
+        listBaru.remove();
+    });
 });
