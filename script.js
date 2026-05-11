@@ -55,7 +55,7 @@ btnTambah.addEventListener("click", function(){
             spanBaru.innerHTML = `
                 <b class="done">${teksTugas}</b><br>
                 Tanggal: ${tanggalTugas}<br>
-                Status: Done
+                Status: <span class ="done-status">done</span>
             `;
 
             btnStatus.innerHTML = "Progress";

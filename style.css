@@ -1,13 +1,13 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: #f0f2f5;
+    background: #b9b2a7;
     padding: 20px;
 }
 
 
 h1{
     text-align: center;
-    color: turquoise;
+    color: rgb(2, 5, 3);
 }
 
 .form{
@@ -71,10 +71,15 @@ li{
 
 .done{
     text-decoration: line-through;
-    color: gray;
+    color: rgb(184, 184, 184);
 }
 
 .progress{
     color: orange;
+    font-weight: bold;
+}
+
+.done-status{
+    color: rgb(52, 255, 33);
     font-weight: bold;
 }
