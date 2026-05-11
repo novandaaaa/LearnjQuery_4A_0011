@@ -16,7 +16,11 @@ btnTambah.addEventListener("click", function(){
     let listBaru = document.createElement("li");
     let spanBaru = document.createElement("span");
 
-    spanBaru.innerHTML = teksTugas;
+   spanBaru.innerHTML = `
+    <b>${teksTugas}</b><br>
+    Tanggal: ${tanggalTugas}<br>
+    Status: <span class="progress">Progress</span>
+`;
 
     listBaru.appendChild(spanBaru);
 
