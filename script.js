@@ -22,8 +22,6 @@ btnTambah.addEventListener("click", function(){
     Status: <span class="progress">Progress</span>
 `;
 
-    listBaru.appendChild(spanBaru);
-
     let divAksi = document.createElement("div");
     divAksi.classList.add("aksi");
 
@@ -87,4 +85,7 @@ btnTambah.addEventListener("click", function(){
     divAksi.appendChild(btnEdit);
     divAksi.appendChild(btnStatus);
     divAksi.appendChild(btnHapus);
+
+    listBaru.appendChild(spanBaru);
+    listBaru.appendChild(divAksi);
 });
