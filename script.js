@@ -48,4 +48,31 @@ btnTambah.addEventListener("click", function(){
     let btnStatus = document.createElement("button");
     btnStatus.innerHTML = "Done";
     btnStatus.classList.add("status");
+
+    let selesai = false;
+
+    btnStatus.addEventListener("click", function () {
+
+        if (!selesai) {
+            spanBaru.innerHTML = `
+                <b class="done">${teksTugas}</b><br>
+                Tanggal: ${tanggalTugas}<br>
+                Status: Done
+            `;
+
+            btnStatus.innerHTML = "Progress";
+            selesai = true;
+
+        } else {
+
+            spanBaru.innerHTML = `
+                <b>${teksTugas}</b><br>
+                Tanggal: ${tanggalTugas}<br>
+                Status: <span class="progress">Progress</span>
+            `;
+
+            btnStatus.innerHTML = "Done";
+            selesai = false;
+        }
+    });
 });
