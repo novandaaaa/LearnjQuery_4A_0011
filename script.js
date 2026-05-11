@@ -27,6 +27,10 @@ btnTambah.addEventListener("click", function(){
     let divAksi = document.createElement("div");
     divAksi.classList.add("aksi");
 
+    let btnEdit = document.createElement("button");
+    btnEdit.innerHTML = "Edit";
+    btnEdit.classList.add("edit");
+
     
 
     daftarTugas.appendChild(listBaru);
