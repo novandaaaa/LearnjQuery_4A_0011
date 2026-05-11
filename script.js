@@ -83,4 +83,8 @@ btnTambah.addEventListener("click", function(){
     btnHapus.addEventListener("click", function () {
         listBaru.remove();
     });
+
+    divAksi.appendChild(btnEdit);
+    divAksi.appendChild(btnStatus);
+    divAksi.appendChild(btnHapus);
 });
