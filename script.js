@@ -75,4 +75,8 @@ btnTambah.addEventListener("click", function(){
             selesai = false;
         }
     });
+
+    let btnHapus = document.createElement("button");
+    btnHapus.innerHTML = "Hapus";
+    btnHapus.classList.add("hapus");
 });
