@@ -90,4 +90,7 @@ btnTambah.addEventListener("click", function(){
     listBaru.appendChild(divAksi);
 
      daftarTugas.appendChild(listBaru);
+
+      inputTugas.value = "";
+    inputTanggal.value = "";
 });
