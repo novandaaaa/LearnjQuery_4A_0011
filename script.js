@@ -88,4 +88,6 @@ btnTambah.addEventListener("click", function(){
 
     listBaru.appendChild(spanBaru);
     listBaru.appendChild(divAksi);
+
+     daftarTugas.appendChild(listBaru);
 });
