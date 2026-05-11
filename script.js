@@ -24,6 +24,11 @@ btnTambah.addEventListener("click", function(){
 
     listBaru.appendChild(spanBaru);
 
+    let divAksi = document.createElement("div");
+    divAksi.classList.add("aksi");
+
+    
+
     daftarTugas.appendChild(listBaru);
     warnabaru.forEach((item, index) => {
         if(index & 2 === 0){
