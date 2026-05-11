@@ -53,3 +53,11 @@ li{
 .edit:hover{
     background: darkorange;
 }
+
+.status{
+    background: purple;
+}
+
+.status:hover{
+    background: indigo;
+}
