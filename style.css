@@ -1,3 +1,10 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+
 h1{
     text-align: center;
     color: turquoise;
