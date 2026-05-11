@@ -61,3 +61,13 @@ li{
 .status:hover{
     background: indigo;
 }
+
+.done{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.progress{
+    color: orange;
+    font-weight: bold;
+}
