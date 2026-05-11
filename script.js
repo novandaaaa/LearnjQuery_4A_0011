@@ -31,6 +31,20 @@ btnTambah.addEventListener("click", function(){
     btnEdit.innerHTML = "Edit";
     btnEdit.classList.add("edit");
 
+    btnEdit.addEventListener("click", function () {
+        let tugasBaru = prompt("Edit tugas:", teksTugas);
+
+        if (tugasBaru !== null && tugasBaru !== "") {
+            teksTugas = tugasBaru;
+
+            spanBaru.innerHTML = `
+                <b>${teksTugas}</b><br>
+                Tanggal: ${tanggalTugas}<br>
+                Status: <span class="progress">Progress</span>
+            `;
+        }
+    });
+
     
 
     daftarTugas.appendChild(listBaru);
