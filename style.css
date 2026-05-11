@@ -45,3 +45,11 @@ li{
 .hapus:hover{
     background: red;
 }
+
+.edit{
+    background: orange;
+}
+
+.edit:hover{
+    background: darkorange;
+}
