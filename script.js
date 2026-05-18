@@ -1,96 +1,99 @@
-const inputTanggal = document.getElementById("inputTanggal");
-const inputTugas = document.getElementById("inputTugas");
-const btnTambah = document.getElementById("btnTambah");
-const daftarTugas = document.getElementById("daftarTugas");
+const inputTanggal = $("#inputTanggal");
+const inputTugas = $("#inputTugas");
+const btnTambah = $("#btnTambah");
+const daftarTugas = $("#daftarTugas");  
 
-btnTambah.addEventListener("click", function(){
+btnTambah.on("click", function(){
 
-    let teksTugas = inputTugas.value;
-    let tanggalTugas = inputTanggal.value;
+    let teksTugas = inputTugas.val();
+    let tanggalTugas = inputTanggal.val();
 
-        if(teksTugas === "" || tanggalTugas === ""){
-            alert("Data dan tanggal harus diisi");
-    return;
-}
+    if(teksTugas === "" || tanggalTugas === ""){
+        alert("Data dan tanggal harus diisi");
+        return;
+    }
 
-    let listBaru = document.createElement("li");
-    let spanBaru = document.createElement("span");
 
-   spanBaru.innerHTML = `
-    <b>${teksTugas}</b><br>
-    Tanggal: ${tanggalTugas}<br>
-    Status: <span class="progress">Progress</span>
-`;
+    let listBaru = $("<li>");
+    let spanBaru = $("<span>");
 
-    let divAksi = document.createElement("div");
-    divAksi.classList.add("aksi");
+   spanBaru.html(`
+        <b>${teksTugas}</b><br>
+        Tanggal: ${tanggalTugas}<br>
+        Status: <span class="progress">Progress</span>
+    `);
 
-    let btnEdit = document.createElement("button");
-    btnEdit.innerHTML = "Edit";
-    btnEdit.classList.add("edit");
+    let divAksi = $("<div>");
+    divAksi.addClass("aksi");
 
-    btnEdit.addEventListener("click", function () {
+    let btnEdit = $("<button>");
+    btnEdit.html("Edit");
+    btnEdit.addClass("edit");
+
+    btnEdit.on("click", function () {
+
         let tugasBaru = prompt("Edit tugas:", teksTugas);
 
         if (tugasBaru !== null && tugasBaru !== "") {
             teksTugas = tugasBaru;
 
-            spanBaru.innerHTML = `
+            spanBaru.html(`
                 <b>${teksTugas}</b><br>
                 Tanggal: ${tanggalTugas}<br>
                 Status: <span class="progress">Progress</span>
-            `;
+            `);
         }
     });
 
-    let btnStatus = document.createElement("button");
-    btnStatus.innerHTML = "Done";
-    btnStatus.classList.add("status");
+    let btnStatus = $("<button>");
+    btnStatus.html("Done");
+    btnStatus.addClass("status");
 
     let selesai = false;
 
-    btnStatus.addEventListener("click", function () {
+    btnStatus.on("click", function () {
 
         if (!selesai) {
-            spanBaru.innerHTML = `
+
+            spanBaru.html(`
                 <b class="done">${teksTugas}</b><br>
                 Tanggal: ${tanggalTugas}<br>
                 Status: <span class ="done-status">done</span>
-            `;
+            `);
 
-            btnStatus.innerHTML = "Progress";
+            btnStatus.html("Progress");
             selesai = true;
 
         } else {
 
-            spanBaru.innerHTML = `
+            spanBaru.html(`
                 <b>${teksTugas}</b><br>
                 Tanggal: ${tanggalTugas}<br>
                 Status: <span class="progress">Progress</span>
-            `;
+            `);
 
-            btnStatus.innerHTML = "Done";
+            btnStatus.html("Done");
             selesai = false;
         }
     });
 
-    let btnHapus = document.createElement("button");
-    btnHapus.innerHTML = "Hapus";
-    btnHapus.classList.add("hapus");
+   let btnHapus = $("<button>");
+    btnHapus.html("Hapus");
+    btnHapus.addClass("hapus");
 
-    btnHapus.addEventListener("click", function () {
+    btnHapus.on("click", function () {
         listBaru.remove();
     });
 
-    divAksi.appendChild(btnEdit);
-    divAksi.appendChild(btnStatus);
-    divAksi.appendChild(btnHapus);
+    divAksi.append(btnEdit);
+    divAksi.append(btnStatus);
+    divAksi.append(btnHapus);
 
-    listBaru.appendChild(spanBaru);
-    listBaru.appendChild(divAksi);
+    listBaru.append(spanBaru);
+    listBaru.append(divAksi);
 
-     daftarTugas.appendChild(listBaru);
+     daftarTugas.append(listBaru);
 
-      inputTugas.value = "";
-    inputTanggal.value = "";
+       inputTugas.val("");
+    inputTanggal.val("");
 });
